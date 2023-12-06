@@ -1,0 +1,14 @@
+ul {
+  display:flex;
+  justify-content: space-around;
+}
+
+li {
+  list-style-type: none;
+}
+
+.board {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
