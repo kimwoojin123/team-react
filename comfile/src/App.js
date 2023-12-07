@@ -1,19 +1,33 @@
 import "./App.css";
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-
+import React from "react";
+import {BrowserRouter as Router, Routes, Route, NavLink} from "react-router-dom";
 
 const headstateData = [
-  { hash: "home", text: "Home", component: Home },
-  { hash: "team", text: "Team", component: Team },
-  { hash: "member", text: "Member", component: Member },
-  { hash: "purpose", text: "Purpose", component: Purpose },
+  {hash: "home", text: "Home", component: Home},
+  {hash: "team", text: "Team", component: Team},
+  {hash: "member", text: "Member", component: Member},
+  {hash: "purpose", text: "Purpose", component: Purpose},
 ];
 
-
-
 function Home() {
-  return <p>Home</p>;
+  return (
+    <div className="prompt">
+      <div>DYABYA</div>
+      <section className="memo-list"></section>
+      <section className="container">
+        <form className="memo-Form" method="POST">
+          <input type="text" className="title" placeholder="이름" />
+          <textarea className="content" placeholder="내용"></textarea>
+          <button type="button" className="saveBtn">
+            저장
+          </button>
+          <button type="button" className="clear">
+            초기화
+          </button>
+        </form>
+      </section>
+    </div>
+  );
 }
 
 function Team() {
@@ -32,8 +46,8 @@ function Head() {
   return (
     <div className="head">
       <ul>
-      {headstateData.map((item) => (
-          <li key={item.hash}>
+        {headstateData.map((item) => (
+          <li key={item.hash} className={item.hash}>
             <NavLink to={item.hash}>{item.text}</NavLink>
           </li>
         ))}
@@ -41,7 +55,6 @@ function Head() {
     </div>
   );
 }
-
 
 function Board() {
   return (
@@ -54,7 +67,6 @@ function Board() {
     </div>
   );
 }
-
 
 function App() {
   return (
