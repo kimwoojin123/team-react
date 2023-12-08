@@ -21,6 +21,7 @@ li {
   width:100vw;
   height:10vh;
   background-color: lightgreen;
+  line-height: 9.5vh;
 }
 
 
@@ -29,7 +30,6 @@ li {
   height: 90vh;
   background-color: white;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -114,4 +114,63 @@ a {
   text-decoration: none;
   color : black;
   font-weight:bold
+}
+
+
+.memberContainer{
+  display:flex;
+  width: 80vw;
+}
+
+.side {
+  width:10vw;
+  height:90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.side>li{
+  width:10vw;
+  height:10vh;
+  background-color: #00cc33;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.memberBoard{
+  width:70vw;
+  height:90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prompt {
+  height:80vh;
+  display:flex;
+  flex-direction: column;
+}
+
+.prompt > div:first-child{
+  background-color: black;
+  color:white;
+}
+
+.memo-list{
+  max-height: 65vh;
+  background-color: lightgreen;
+  padding-left:1vw;
+  overflow-y : scroll;
+  scroll-behavior: smooth;
+  scrollbar-width:none;
+}
+
+.memo-form {
+  display:flex;
+  justify-content: space-between;
 }
