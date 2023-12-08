@@ -48,9 +48,9 @@ function Home() {
   }, []); // 의존성 배열을 빈 배열을 설정해 처음 마운트될때만 실행되게 함
 
   useEffect(() => {
-    const container = memoListRef.current;
-    if (container) {
-      container.scrollTop = container.scrollHeight;
+    const listScroll = memoListRef.current;
+    if (listScroll) {
+      listScroll.scrollTop = listScroll.scrollHeight;
     }
   }, [memos]);
 
